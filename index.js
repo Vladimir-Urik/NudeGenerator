@@ -4,6 +4,7 @@ const {
 const request = require("request")
 const fetch = require("sync-fetch")
 const Color = require("sync-color")
+Color.init()
 const fs = require("fs")
 function Generador(Link, What) {
     resetConsole()
@@ -47,7 +48,6 @@ function main() {
        [3]: Generate 4K    | [4]: Generate Tits
        [5]: Generate Thigh | [6]: Generate Hentai\n`))
     var choosed = question(Color.InitGradient(["#00aaaa", "#FF1493"])("Select A Number: "))
-    Color.init()
     switch (choosed) {
         case "1":
             Generador("https://nekobot.xyz/api/image?type=pussy", "Pussy");
